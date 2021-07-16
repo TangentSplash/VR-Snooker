@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3938934555546356165}
   - component: {fileID: 6038531018664642938}
   - component: {fileID: 3837007253435280007}
-  - component: {fileID: 1145038254479187287}
   m_Layer: 0
   m_Name: Audio Player
   m_TagString: Untagged
@@ -42,8 +41,7 @@ AudioSource:
   m_GameObject: {fileID: 2248846747064389041}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -142,23 +140,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bbabd8a65d8a348ae8fd0da0e4e4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1145038254479187287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2248846747064389041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableSpatialization: 1
-  gain: 0
-  useInvSqr: 0
-  near: 0.25
-  far: 10
-  volumetricRadius: 0
-  reverbSend: 0
-  enableRfl: 0

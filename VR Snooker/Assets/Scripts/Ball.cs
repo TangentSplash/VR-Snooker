@@ -8,7 +8,6 @@ public class Ball : MonoBehaviour
     public int Score;
 
     private Rigidbody Rigidbody;
-    bool MovingLast = false;
     public bool Stopped = false;
 
     void Start()
