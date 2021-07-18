@@ -27,7 +27,6 @@ public class Table : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Entered");
         if (collider.gameObject.layer==15 || collider.gameObject.name == "White")
         {
             Balls.Add(collider.GetComponent<Ball>());
