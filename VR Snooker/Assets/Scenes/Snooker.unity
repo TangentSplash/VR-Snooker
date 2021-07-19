@@ -1097,6 +1097,7 @@ GameObject:
   - component: {fileID: 470085116}
   - component: {fileID: 470085115}
   - component: {fileID: 470085114}
+  - component: {fileID: 470085117}
   m_Layer: 16
   m_Name: Cue
   m_TagString: Untagged
@@ -1153,6 +1154,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470085117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470085113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60ed54a102392b40aa67a875b8b6efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &586319688
 GameObject:
   m_ObjectHideFlags: 0
@@ -6531,7 +6544,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 763637343}
   m_Material: {fileID: 13400000, guid: a6205453f38978346a3e0d37c4145f53, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.005
   m_Height: 1.45
   m_Direction: 2
@@ -6545,7 +6558,7 @@ MeshCollider:
   m_GameObject: {fileID: 763637343}
   m_Material: {fileID: 13400000, guid: a6205453f38978346a3e0d37c4145f53, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
