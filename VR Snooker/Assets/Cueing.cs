@@ -13,7 +13,7 @@ public class Cueing : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collider)
+    /*private void OnCollisionEnter(Collision collider)
     {
         if (collider.gameObject.layer == 15 || collider.gameObject.name == "Cue Ball")
         {
@@ -22,15 +22,16 @@ public class Cueing : MonoBehaviour
             Debug.Log(Velocity + " " + Pos);
             collider.rigidbody.AddForceAtPosition(Velocity, Pos, ForceMode.Impulse);
         }
-    }
-
+    }*/
     /*private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.layer==15 || collider.gameObject.name=="Cue Ball")
         {
+            Velocity=Rigidbody.a
             Velocity = Rigidbody.velocity;
-            //GetContacts()
-            //collider.attachedRigidbody.AddForceAtPosition()
+            Pos =collider.ClosestPointOnBounds(GetComponentsInChildren<Transform>()[1].position);
+            Debug.Log(Velocity + " " + Pos);
+            collider.attachedRigidbody.AddForceAtPosition(Velocity, Pos, ForceMode.VelocityChange);
         }
     }*/
 }

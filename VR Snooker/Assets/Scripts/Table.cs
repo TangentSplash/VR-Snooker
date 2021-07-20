@@ -27,7 +27,7 @@ public class Table : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.layer==15 || collider.gameObject.name == "White")
+        if (collider.gameObject.layer==15 || collider.gameObject.name == "Cue Ball")
         {
             Balls.Add(collider.GetComponent<Ball>());
         }

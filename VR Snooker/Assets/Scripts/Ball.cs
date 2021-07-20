@@ -48,12 +48,12 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.layer == 15 || collision.gameObject.name=="Cue")     //In balls Layer
         {
             Vector3 location;
-            float speed;
+            float speed = collision.relativeVelocity.magnitude;
             float num;
             string name;
+
             if (collision.gameObject.layer == 15)
             {
-                speed = collision.relativeVelocity.magnitude;
                 if (speed <= 1)
                 {
                     name = "Small";
@@ -70,6 +70,7 @@ public class Ball : MonoBehaviour
             else
             {
                 name = "Cue";
+                AudioManager.PlayHaptic(0, 0.4f, 0.25f);
             }
             location = collision.GetContact(0).point;
             num = (Mathf.Round(Random.Range(1, 3)));
