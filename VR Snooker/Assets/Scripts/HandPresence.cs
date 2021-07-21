@@ -52,13 +52,13 @@ public class HandPresence : MonoBehaviour
 
     void Update()
     {
-        if(!targetDevice.isValid)
+        /*if(!targetDevice.isValid)
         {
             TryInitalise();
         }
         else
-        { 
+        {*/ 
             UpdateHandAnimation();
-        }
+        //}
     }
 }

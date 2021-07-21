@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class Referee : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Referee : MonoBehaviour
     public GameObject pointer;
     public GameObject Line;
     public List<string> BallOrder = new List<string>() { "Yellow","Green","Brown","Blue", "Pink","Black" };
+    public TMP_Text Information;
+    private string Player = "1";
 
     public bool RedExpected = true;
     bool potthisshot = false;
@@ -50,12 +53,16 @@ public class Referee : MonoBehaviour
                     BallOrder.RemoveAt(0);
                 }
             }
+            Information.text = "Player " + Player + " to pot " + Expected + "ball";
         }
         else
         {
             Debug.Log("Wrong Ball FOUL");
             Ball.gameObject.GetComponent<Ball>().Reset();
             potthisshot = false;
+            Information.text = "Wrong ball potted. Foul";
+            Scoreboard.PlayerScored(!Player1, 4);
+            NextPlayer();
         }
     }
 
@@ -77,10 +84,12 @@ public class Referee : MonoBehaviour
             if (Player1)
             {
                 Line.SetActive(true);
+                Player = "1";
             }
             else
             {
                 Line.SetActive(false);
+                Player = "2";
             }
             if(RedRemaining)
             {
@@ -107,6 +116,9 @@ public class Referee : MonoBehaviour
             Debug.Log("Out of Bounds FOUL");
             Ball.gameObject.GetComponent<Ball>().Reset();
             potthisshot = false;
+            Information.text = "Ball hit out of bounds. Foul";
+            Scoreboard.PlayerScored(!Player1, 4);
+            NextPlayer();
         }
 
     }

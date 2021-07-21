@@ -31,7 +31,7 @@ public class GuideLine : MonoBehaviour
         BaseHandPos += (RayVector.normalized);
 
 
-        Physics.Raycast(BaseHandPos, RayVector, out hit,Mathf.Infinity,(1<<14 | 1<< 15), QueryTriggerInteraction.Ignore);
+        Physics.Raycast(BaseHandPos, RayVector, out hit,Mathf.Infinity,1<<14 | 1<< 15, QueryTriggerInteraction.Ignore);
         Line.SetPosition(0, BaseHandPos);
         Line.SetPosition(1, hit.point);
     }
