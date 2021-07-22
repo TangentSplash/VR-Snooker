@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Cueing : MonoBehaviour
@@ -7,6 +5,7 @@ public class Cueing : MonoBehaviour
     private Rigidbody Rigidbody;
     private Vector3 Velocity;
     private Vector3 Pos;
+
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
@@ -23,6 +22,7 @@ public class Cueing : MonoBehaviour
             collider.rigidbody.AddForceAtPosition(Velocity, Pos, ForceMode.Impulse);
         }
     }*/
+
     /*private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.layer==15 || collider.gameObject.name=="Cue Ball")

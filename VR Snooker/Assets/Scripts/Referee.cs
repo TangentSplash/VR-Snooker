@@ -83,12 +83,12 @@ public class Referee : MonoBehaviour
             Scoreboard.PlayerChanged(Player1);
             if (Player1)
             {
-                Line.SetActive(true);
+                //Line.SetActive(true);
                 Player = "1";
             }
             else
             {
-                Line.SetActive(false);
+                //Line.SetActive(false);
                 Player = "2";
             }
             if(RedRemaining)
