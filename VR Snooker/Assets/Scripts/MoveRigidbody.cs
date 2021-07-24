@@ -33,8 +33,7 @@ public class MoveRigidbody : MonoBehaviour
             //CueRigidbody.MovePosition(Target);
             velocityDelta = Delta / Time.deltaTime;
             CalculatedVelocity = Vector3.MoveTowards(CueRigidbody.velocity, velocityDelta, MaxDistanceDelta);
-            if (CalculatedVelocity.magnitude >= MinDistMove)
-                CueRigidbody.velocity = CalculatedVelocity;
+            CueRigidbody.velocity = CalculatedVelocity;
         }
         HandDelta = FrontHand.position - Current;
         CurrentQuat = transform.rotation;
@@ -51,9 +50,13 @@ public class MoveRigidbody : MonoBehaviour
             Vector3 calculatedAngularVelocity = Vector3.MoveTowards(CueRigidbody.angularVelocity, angularTarget, MaxDistanceDelta);
             if (!float.IsNaN(calculatedAngularVelocity.x) && !float.IsNaN(calculatedAngularVelocity.y) && !float.IsNaN(calculatedAngularVelocity.z))
             {
-                    CueRigidbody.angularVelocity = calculatedAngularVelocity;
+                CueRigidbody.angularVelocity = calculatedAngularVelocity;
             }
         }
         
+    }
+    public void LateUpdate()
+    {
+        CueRigidbody.Sleep();
     }
 }

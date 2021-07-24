@@ -53,7 +53,7 @@ public class Referee : MonoBehaviour
                     BallOrder.RemoveAt(0);
                 }
             }
-            Information.text = "Player " + Player + " to pot " + Expected + "ball";
+            Information.text = "Player " + Player + " to pot " + Expected + " ball";
         }
         else
         {
@@ -97,12 +97,14 @@ public class Referee : MonoBehaviour
                 Expected = "Red";
             }
         }
+        Information.text = "Player " + Player + " to pot " + Expected + " ball";
     }
 
     public void ChooseBall(string ball)
     {
         Expected = ball;
         pointer.SetActive(false);
+        Information.text = "Player " + Player + " to pot " + Expected + " ball";
     }
 
     public void BallOut(Collider Ball)
