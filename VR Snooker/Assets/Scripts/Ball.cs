@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
 
     private Rigidbody Rigidbody;
     public bool Stopped = false;
+    private Vector2 Velocity;
 
     void Start()
     {
@@ -81,12 +82,14 @@ public class Ball : MonoBehaviour
 
     public void Reset()
     {
+        Debug.Log("Reset");
         Rigidbody.Sleep();
         transform.position = StartPos;
     }
 
     private void Update()
     {
-        Stopped = (Rigidbody.velocity.magnitude <= 0.01);
+        Velocity = new Vector2(Rigidbody.velocity.x, Rigidbody.velocity.z);
+        Stopped = (Velocity.magnitude <= 0.01);
     }
 }

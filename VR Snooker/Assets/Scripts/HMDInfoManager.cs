@@ -8,13 +8,10 @@ public class HMDInfoManager : MonoBehaviour
     {
         Debug.Log("Active " + XRSettings.isDeviceActive);
         Debug.Log(XRSettings.loadedDeviceName);
-        if (XRSettings.isDeviceActive)
+        if (!XRSettings.isDeviceActive)
         {
-            if (XRSettings.loadedDeviceName != "MockHMDDisplay")
-            {
-                Debug.Log("Using Mock HMD");
-                //MockHMD.SetActive(false);
-            }
+            Debug.Log("Using Mock HMD");
+            MockHMD.SetActive(true);
         }
     }
 

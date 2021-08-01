@@ -20,8 +20,11 @@ public class Table : MonoBehaviour
         }
         else if (collider.gameObject.name=="Cue Ball")
         {
-            Debug.Log("White Ball Out Foul");
-            collider.GetComponent<Ball>().Reset();
+            if(!collider.GetComponent<GrabbedCueBall>().grabbedlast)
+            {
+                Debug.Log("White Ball Out Foul");
+                collider.GetComponent<Ball>().Reset();
+            }
         }
     }
 
@@ -29,6 +32,7 @@ public class Table : MonoBehaviour
     {
         if (collider.gameObject.layer==15 || collider.gameObject.name == "Cue Ball")
         {
+            Debug.Log("Entered");
             Balls.Add(collider.GetComponent<Ball>());
         }
     }
