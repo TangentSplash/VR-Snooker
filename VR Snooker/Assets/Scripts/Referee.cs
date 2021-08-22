@@ -12,6 +12,8 @@ public class Referee : MonoBehaviour
     public GameObject Line;
     public List<string> BallOrder = new List<string>() { "Yellow","Green","Brown","Blue", "Pink","Black" };
     public TMP_Text Information;
+    public DynamicTable Table;
+    public Balls balls;
     private string Player = "1";
 
     public bool RedExpected = true;
@@ -19,6 +21,16 @@ public class Referee : MonoBehaviour
 
     Collider PottedBall = null;
 
+    public void MakeGame(string GameType,float TableSize)
+    {
+        bool Pool=false;
+        float scaleFactor=Table.Build(TableSize);
+        if (GameType=="Pool")
+        {
+            Pool = true;
+        }
+        balls.Place(scaleFactor, Pool);         
+    }
     public void Potted(Collider Ball)
     {
         PottedBall = Ball;

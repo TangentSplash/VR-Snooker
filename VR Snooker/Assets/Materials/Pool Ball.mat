@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Table
-  m_Shader: {fileID: -6465566751694194690, guid: a9a739dce9ea0d7448b9cd2cfe96db07, type: 3}
+  m_Name: Pool Ball
+  m_Shader: {fileID: -6465566751694194690, guid: 492e7325faafa50438f15c07d4c6048f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_080d4b86d4be4d578a2f8e9d3bd90694:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,9 +80,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1ee73acaf7eb4873a8272601014cec1d: 0
-    - Vector1_9695f8a22d704529a34bd6663462d02c: 0.285
-    - Vector1_e8fcdf56e7134c9a85a40952e379fe8d: 0.005
+    - Boolean_ae177396764e438fab2d176da88c4343: 0
+    - Boolean_e1fb8e839d384bb391442c5a4c26f222: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -106,17 +109,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_0b9eb784dffd4fd189ea9830110ce60d: {r: 0.10980392, g: 0.627451, b: 0, a: 0}
-    - Color_bf50aa803c1641c2af6ca6a50fe511d9: {r: 1, g: 1, b: 1, a: 0}
-    - Vector2_9adcd2a6c25d46e8b651035ca5520512: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_d4a091ecefe54b419096fa1bae09e3e6: {r: 1, g: -1, b: 0, a: 0}
-    - Vector2_df5ebb357fb64b1b9736191c89248bf6: {r: 1, g: 0, b: 0, a: 0}
+    - Color_9c26e1ea30de4dfe92fccc2b500228b3: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &1153198024523002061
+--- !u!114 &2330393143740574239
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -5,7 +5,9 @@ public class Ball : MonoBehaviour
     SoundManager AudioManager;
 
     public Vector3 StartPos;
+    public string Name;
     public int Score;
+    public int no;
 
     private Rigidbody Rigidbody;
     public bool Stopped = false;
@@ -15,8 +17,9 @@ public class Ball : MonoBehaviour
     {
         Rigidbody=GetComponent<Rigidbody>();
         AudioManager = GameObject.Find("Audio Manager").GetComponent<SoundManager>();
-        StartPos = transform.position;
-        switch (gameObject.name.Split(' ')[0])
+        /*StartPos = transform.position;
+        Name = gameObject.name.Split(' ')[0];
+        switch (Name)
         {
             case "Red":
                 Score = 1;
@@ -41,7 +44,7 @@ public class Ball : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
     }
 
     private void OnCollisionEnter(Collision collision)

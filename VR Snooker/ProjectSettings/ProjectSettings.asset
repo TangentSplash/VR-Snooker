@@ -132,6 +132,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 1e24ec85b457a4b408045230a9277704, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -685,7 +686,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    7: ENABLE_HYBRID_RENDERER_V2
+    7: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
