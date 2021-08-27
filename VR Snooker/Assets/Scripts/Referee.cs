@@ -24,7 +24,20 @@ public class Referee : MonoBehaviour
     public void MakeGame(string GameType,float TableSize)
     {
         bool Pool=false;
-        float scaleFactor=Table.Build(TableSize);
+        float ballsize;
+        if (TableSize>=9)
+        {
+            ballsize = 0.0525f;
+        }
+        else
+        {
+            ballsize = 0.0475f;
+        }
+        if (GameType=="Pool")
+        {
+            ballsize = 0.057f;
+        }
+        float scaleFactor=Table.Build(TableSize,ballsize/0.0525f);
         if (GameType=="Pool")
         {
             Pool = true;

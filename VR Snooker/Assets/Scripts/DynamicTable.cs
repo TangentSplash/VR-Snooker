@@ -26,7 +26,7 @@ public class DynamicTable : MonoBehaviour
     float up;
     float right;
 
-    public float Build(float size)
+    public float Build(float size,float heightscale)
     {
         ReqSize = size;
         Elements = new GameObject[][] { Boundary, Felt, Cushion };
@@ -38,8 +38,13 @@ public class DynamicTable : MonoBehaviour
                 TableElement info = part.GetComponent<TableElement>();
                 if (info.Type == "Long" || info.Type == "Short")
                 {
+                    float height = 1;
                     info.realsize = info.FullSize * scaleFactor;
-                    part.transform.localScale = new Vector3(1, scaleFactor, 1);
+                    if (j!=1)
+                    {
+                        height = heightscale;
+                    }
+                    part.transform.localScale = new Vector3(1, scaleFactor, height);
                 }
                 else if (info.Type == "Centre")
                 {
@@ -118,7 +123,7 @@ public class DynamicTable : MonoBehaviour
             {
                 cushionlonglength = info.FullSize;
                 cushionno = info.number;
-                cushion.transform.localScale = new Vector3(1, scaleFactor, 1);
+                cushion.transform.localScale = new Vector3(1, scaleFactor, heightscale);
                 cushion.transform.localPosition = new Vector3(0, cushion.transform.localPosition.y, 0);
                 cushionlong = cushion;
             }
@@ -126,7 +131,7 @@ public class DynamicTable : MonoBehaviour
             {
                 cushionshortlength = info.FullSize;
                 cushionno = info.number;
-                cushion.transform.localScale = new Vector3(1, scaleFactor, 1);
+                cushion.transform.localScale = new Vector3(1, scaleFactor, heightscale);
                 cushion.transform.localPosition = new Vector3(0, cushion.transform.localPosition.y, 0);
                 cushionshort = cushion;
             }
